@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilham Wijaya | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B2447',
+                        gold: '#D4AF37',
+                        light: '#F8F9FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-light text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="text-2xl font-bold text-navy">IW<span class="text-gold">.</span></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-navy font-semibold transition">Tentang</a>
+                    <a href="#experience" class="text-gray-600 hover:text-navy font-semibold transition">Pengalaman</a>
+                    <a href="#projects" class="text-gray-600 hover:text-navy font-semibold transition">Proyek</a>
+                    <a href="#skills" class="text-gray-600 hover:text-navy font-semibold transition">Keahlian</a>
+                    <a href="#contact" class="text-gray-600 hover:text-navy font-semibold transition">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-b from-white to-gray-100 px-4">
+        <div class="text-center max-w-4xl flex flex-col items-center">
+            <!-- Menambahkan Foto Profil (Menggunakan foto Foto_profil.jpeg sesuai permintaan) -->
+            <img src="Foto_profil.jpeg" alt="Ilham Wijaya" class="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-gold shadow-xl mb-6 object-top">
+            
+            <h2 class="text-gold font-semibold tracking-wider mb-2 uppercase">Halo, Saya</h2>
+            <h1 class="text-5xl md:text-7xl font-bold text-navy mb-4">Ilham Wijaya</h1>
+            <h3 class="text-2xl md:text-3xl text-gray-600 mb-8 font-light">Data Analyst | Machine Learning | IoT Engineer</h3>
+            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto">
+                Menggabungkan Sains Atmosfer, analitik data, dan teknologi IoT untuk mengembangkan solusi cerdas pemantauan lingkungan.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="bg-navy text-white px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition shadow-lg">Lihat Proyek</a>
+                <a href="#contact" class="border-2 border-navy text-navy px-8 py-3 rounded-md font-semibold hover:bg-navy hover:text-white transition shadow-lg">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-navy mb-2">Tentang Saya</h2>
+            <div class="w-16 h-1 bg-gold mx-auto mb-8"></div>
+            <p class="text-gray-600 leading-relaxed text-lg text-justify md:text-center">
+                Saya adalah mahasiswa tingkat akhir program studi Sains Atmosfer dan Keplanetan di Institut Teknologi Sumatera (2022-2026). Saya berfokus pada pendekatan berbasis data dengan pengalaman praktis menggunakan Python, algoritma Machine Learning, serta sistem pemantauan perangkat keras Internet of Things (IoT). Saya memiliki minat besar dalam menerapkan analitik data untuk memecahkan masalah teknik dan lingkungan dunia nyata.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 bg-light">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-navy mb-2 text-center">Pengalaman Profesional</h2>
+            <div class="w-16 h-1 bg-gold mx-auto mb-12"></div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-navy hover:shadow-xl transition flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-navy">Project Intern</h3>
+                        <span class="text-sm font-semibold text-gold bg-navy px-3 py-1 rounded-full">Jun 2025 - Jul 2025</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mb-4">PT PLN Nusantara Power | Bekasi, Indonesia</h4>
+                    
+                    <!-- Galeri Foto Intern PLN (Hanya 2 foto dokumentasi alat) -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <img src="intern_PLN.jpeg" alt="Intern PLN Prototype 1" class="rounded-lg w-full h-40 object-cover shadow-sm hover:scale-105 transition duration-300">
+                        <img src="Intern_PLN (2).jpeg" alt="Intern PLN Prototype 2" class="rounded-lg w-full h-40 object-cover shadow-sm hover:scale-105 transition duration-300">
+                    </div>
+
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 flex-grow">
+                        <li>Mengembangkan prototipe peringatan dini banjir berbasis IoT untuk area industri.</li>
+                        <li>Mengintegrasikan ESP32 dengan sensor ultrasonik JSN-SR04T, DHT22, dan sensor hujan.</li>
+                        <li>Mengimplementasikan notifikasi Bot Telegram dan platform cloud ThingSpeak.</li>
+                        <li>Melakukan kalibrasi sensor dan validasi lapangan untuk keandalan pemantauan.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-navy hover:shadow-xl transition flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-navy">Teaching Assistant</h3>
+                        <span class="text-sm font-semibold text-gold bg-navy px-3 py-1 rounded-full">Feb 2025 - Mei 2025</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mb-4">Institut Teknologi Sumatera</h4>
+                    
+                    <!-- Galeri Foto Teaching Assistant -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <img src="teach_asist.jpeg" alt="Teaching Assistant 1" class="rounded-lg w-full h-40 object-cover shadow-sm hover:scale-105 transition duration-300 object-top">
+                        <!-- Menambahkan object-top agar foto ini fokus ke bagian atas (wajah) -->
+                        <img src="Teach_asist (2).jpeg" alt="Teaching Assistant 2" class="rounded-lg w-full h-40 object-cover shadow-sm hover:scale-105 transition duration-300 object-top">
+                    </div>
+
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 flex-grow">
+                        <li>Mendampingi sesi laboratorium untuk Sains Atmosfer dan Keplanetan Komputasional.</li>
+                        <li>Membimbing mahasiswa dalam pemrograman Python dan komputasi sains (Google Colab, Pandas).</li>
+                        <li>Mendukung kegiatan penugasan praktikum dan evaluasi nilai.</li>
+                        <li>Berkolaborasi dengan dosen dalam menyusun materi praktikum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-navy mb-2 text-center">Proyek Unggulan</h2>
+            <div class="w-16 h-1 bg-gold mx-auto mb-12"></div>
+
+            <div class="bg-light p-8 rounded-lg shadow-md border-l-4 border-gold hover:shadow-xl transition max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                    <h3 class="text-2xl font-bold text-navy mb-2 md:mb-0">Sistem Prediksi & Pemantauan Level Air IoT</h3>
+                    <span class="text-sm font-semibold text-navy bg-gold px-3 py-1 rounded-full">Jan 2026 - Jun 2026</span>
+                </div>
+                
+                <!-- Galeri Foto Proyek -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <img src="https://raw.githubusercontent.com/ilham-wijaya/water-level-intelligence-system/main/assets/prototype_setup.png" alt="Prototype Setup" class="rounded-lg shadow-md w-full h-auto hover:opacity-90 transition cursor-pointer">
+                    <img src="https://raw.githubusercontent.com/ilham-wijaya/water-level-intelligence-system/main/assets/system_flowchart.png" alt="System Flowchart" class="rounded-lg shadow-md w-full h-auto hover:opacity-90 transition cursor-pointer">
+                    <img src="https://raw.githubusercontent.com/ilham-wijaya/water-level-intelligence-system/main/assets/prediction_dashboard.jpg" alt="Dashboard" class="rounded-lg shadow-md w-full h-auto hover:opacity-90 transition cursor-pointer">
+                    <img src="https://raw.githubusercontent.com/ilham-wijaya/water-level-intelligence-system/main/assets/actual_vs_predicted_1h.png" alt="Analysis" class="rounded-lg shadow-md w-full h-auto hover:opacity-90 transition cursor-pointer">
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-xs font-bold px-2 py-1 bg-gray-200 rounded text-gray-700">ESP32</span>
+                    <span class="text-xs font-bold px-2 py-1 bg-gray-200 rounded text-gray-700">XGBoost</span>
+                    <span class="text-xs font-bold px-2 py-1 bg-gray-200 rounded text-gray-700">Python</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                    Sistem cerdas end-to-end yang memadukan akuisisi data sensor perangkat keras dengan model prediksi machine learning.
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>Merancang sistem pemantauan level air real-time menggunakan sensor ultrasonik JSN-SR04T.</li>
+                    <li>Mengembangkan model regresi XGBoost untuk memprediksi level air di masa depan.</li>
+                    <li>Melakukan prapemrosesan data, rekayasa fitur, dan evaluasi model (MAE & RMSE).</li>
+                    <li>Membangun pipeline akuisisi data yang lengkap dari sensor hingga output prediksi.</li>
+                </ul>
+                <div class="mt-6">
+                    <a href="https://github.com/ilham-wijaya/water-level-intelligence-system" target="_blank" class="text-navy font-semibold hover:text-gold transition">
+                        <i class="fab fa-github mr-2"></i>Lihat Detail di GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-navy text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-2">Keahlian Utama</h2>
+            <div class="w-16 h-1 bg-gold mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Programming -->
+                <div class="p-4 bg-white bg-opacity-10 rounded-lg">
+                    <h4 class="text-gold font-bold mb-4">Pemrograman</h4>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Python</span>
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">SQL</span>
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Arduino</span>
+                    </div>
+                </div>
+                <!-- Machine Learning -->
+                <div class="p-4 bg-white bg-opacity-10 rounded-lg">
+                    <h4 class="text-gold font-bold mb-4">Machine Learning</h4>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">XGBoost</span>
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Scikit-learn</span>
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Regresi</span>
+                    </div>
+                </div>
+                <!-- Data Analytics -->
+                <div class="p-4 bg-white bg-opacity-10 rounded-lg">
+                    <h4 class="text-gold font-bold mb-4">Analitik Data</h4>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Pandas</span>
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">NumPy</span>
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Matplotlib</span>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="p-4 bg-white bg-opacity-10 rounded-lg">
+                    <h4 class="text-gold font-bold mb-4">Perangkat</h4>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Jupyter</span>
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Colab</span>
+                        <span class="bg-white text-navy px-3 py-1 rounded-md text-sm font-semibold">Office</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="mt-12 text-left bg-white bg-opacity-5 p-6 rounded-lg inline-block">
+                <h4 class="text-gold font-bold mb-4 text-center">Sertifikasi Kaggle</h4>
+                <ul class="list-none text-sm space-y-2 text-center text-gray-200">
+                    <li>Intermediate Machine Learning</li>
+                    <li>Feature Engineering</li>
+                    <li>Time Series</li>
+                    <li>Machine Learning Explainability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-light">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-navy mb-2">Mari Bekerja Sama</h2>
+            <div class="w-16 h-1 bg-gold mx-auto mb-8"></div>
+            <p class="text-gray-600 mb-10">Saya terbuka untuk peluang profesional baru diskusi proyek kolaborasi dan posisi penuh waktu.</p>
+            
+            <div class="flex justify-center gap-6">
+                <!-- Email -->
+                <a href="mailto:ilhamwijayaa84@gmail.com" class="w-14 h-14 bg-navy text-white rounded-full flex items-center justify-center text-2xl hover:bg-gold hover:text-navy transition shadow-lg" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/6285882362088" target="_blank" class="w-14 h-14 bg-navy text-white rounded-full flex items-center justify-center text-2xl hover:bg-green-500 hover:text-white transition shadow-lg" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/ilhamwijaya1" target="_blank" class="w-14 h-14 bg-navy text-white rounded-full flex items-center justify-center text-2xl hover:bg-blue-600 hover:text-white transition shadow-lg" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/ilham-wijaya" target="_blank" class="w-14 h-14 bg-navy text-white rounded-full flex items-center justify-center text-2xl hover:bg-gray-800 hover:text-white transition shadow-lg" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-center py-6 border-t border-gray-800">
+        <p class="text-gray-400 text-sm">© 2026 Ilham Wijaya. Dibangun dengan HTML5 & Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>
