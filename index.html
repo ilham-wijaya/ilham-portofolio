@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portofolio Ilham Wijaya: data analytics, machine learning, IoT, instrumentasi, dan pengembangan sistem berbasis ESP32.">
+  <meta name="description" content="Portofolio Ilham Wijaya: analisis data, machine learning, IoT, administrasi, serta pelatihan Human Resources dan Microsoft Excel.">
   <title>Ilham Wijaya | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,24 +19,38 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     body { font-family: Inter, sans-serif; }
     .section-heading:after { content: ""; display: block; width: 4rem; height: 4px; background: #D4AF37; margin: 1rem auto 0; }
+    /* Jarak agar judul tidak tertutup navbar ketika menu diklik. */
+    section[id], header[id] { scroll-margin-top: 4.75rem; }
   </style>
+  <!-- Digunakan hanya untuk membuat pratinjau halaman pertama PDF.
+       Jika gagal termuat, kartu tetap menampilkan ikon dan link PDF yang berfungsi. -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body class="bg-light text-gray-800">
   <nav class="fixed inset-x-0 top-0 bg-white/95 backdrop-blur shadow-md z-50">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <a href="#home" class="text-2xl font-bold text-navy">IW<span class="text-gold">.</span></a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
+      <div class="hidden lg:flex items-center gap-5 text-sm font-semibold">
         <a href="#about" class="hover:text-gold">Tentang</a>
         <a href="#experience" class="hover:text-gold">Pengalaman</a>
         <a href="#projects" class="hover:text-gold">Proyek</a>
         <a href="#education" class="hover:text-gold">Pendidikan</a>
         <a href="#skills" class="hover:text-gold">Keahlian</a>
         <a href="#certifications" class="hover:text-gold">Sertifikasi</a>
+        <a href="#sertifikasi-baru" class="hover:text-gold">HR &amp; Excel</a>
         <a href="#contact" class="hover:text-gold">Kontak</a>
-<a href="#sertifikasi-baru" class="text-gray-600 hover:text-navy font-semibold transition">
-  HR & Excel
-</a>
-
+      </div>
+      <button id="menu-button" type="button" aria-label="Buka menu" aria-controls="mobile-menu"
+              aria-expanded="false" class="lg:hidden text-navy text-xl p-2">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4 shadow-md">
+      <div class="grid grid-cols-2 gap-4 text-sm font-semibold text-navy">
+        <a href="#about">Tentang</a><a href="#experience">Pengalaman</a>
+        <a href="#projects">Proyek</a><a href="#education">Pendidikan</a>
+        <a href="#skills">Keahlian</a><a href="#certifications">Sertifikasi</a>
+        <a href="#sertifikasi-baru">HR &amp; Excel</a><a href="#contact">Kontak</a>
       </div>
     </div>
   </nav>
@@ -44,7 +58,7 @@
   <header id="home" class="min-h-[88vh] flex items-center justify-center pt-24 pb-16 px-4 bg-gradient-to-b from-white to-gray-100">
     <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
       
-<img src="foto_link.jpg" alt="Ilham Wijaya" class="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-gold shadow-xl mb-6 object-top">
+<img src="foto_link.jpeg" onerror="this.onerror=null;this.src='Foto_profil.jpeg'" alt="Ilham Wijaya" class="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-gold shadow-xl mb-6 object-top">
       <p class="uppercase tracking-widest text-gold font-bold mb-2">Halo, saya</p>
       <h1 class="text-4xl md:text-6xl font-bold text-navy mb-4">Ilham Wijaya</h1>
       <h2 class="text-xl md:text-2xl text-gray-600 mb-6">Data Analytics | Machine Learning | IoT & Instrumentation</h2>
@@ -96,9 +110,11 @@
 
 <img src="observation_group.png" alt="Kegiatan observasi astronomi bersama mahasiswa di lokasi pengamatan" class="rounded-lg w-full h-36 object-cover object-center"/>
 <img src="observation_telescope.png" alt="Praktik pengamatan menggunakan teleskop di laboratorium" class="rounded-lg w-full h-36 object-cover object-center"/>
-<img src="Ilham Wijaya_Instrumentasi dan Observasi II-1.png" alt="Sertifikat Teaching Assistant Instrumentation and Observation 2" class="w-full h-40 object-contain rounded-lg border border-gray-200"
-  />
           </div>
+          <a href="Ilham Wijaya_Instrumentasi dan Observasi II-1.png" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 mb-5 text-sm font-semibold text-navy border border-navy/20 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
+            <i class="fas fa-certificate text-gold" aria-hidden="true"></i> Lihat Sertifikat Asisten Praktikum
+          </a>
           <ul class="list-disc list-inside text-gray-600 space-y-2">
             <li>Mendukung praktikum instrumentasi dan observasi astronomi.</li>
             <li>Menyiapkan instrumen laboratorium serta membantu prosedur observasi dan pengukuran.</li>
@@ -116,10 +132,12 @@
           <div class="grid grid-cols-2 gap-3 mb-5">
             <img src="teach_asist.jpeg" alt="Dokumentasi asisten komputasi" class="rounded-lg w-full h-36 object-cover object-top"/>
             <img src="Teach_asist (2).jpeg" alt="Kegiatan pendampingan praktikum" class="rounded-lg w-full h-36 object-cover object-top"/>
-            <img src="Komputasi dalam Sains Atmosfer dan Keplanetan Semester Genap Tahun Akademik 2024_2025 Ilham Wijaya (-1.png" alt="Sertifikat Teaching Assistant Computation"
-    class="w-full h-40 object-contain rounded-lg border border-gray-200"
-              />
-              </div>
+                      </div>
+          <a href="Komputasi dalam Sains Atmosfer dan Keplanetan Semester Genap Tahun Akademik 2024_2025 Ilham Wijaya (-1.png"
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 mb-5 text-sm font-semibold text-navy border border-navy/20 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
+            <i class="fas fa-certificate text-gold" aria-hidden="true"></i> Lihat Sertifikat Asisten Praktikum
+          </a>
           <ul class="list-disc list-inside text-gray-600 space-y-2">
             <li>Mendampingi praktikum pemrograman Python, metode komputasi, dan analisis data.</li>
             <li>Membimbing penggunaan Google Colab, pustaka Python, dan pengolahan data ilmiah.</li>
@@ -133,16 +151,14 @@
             <span class="text-xs font-semibold bg-navy text-white px-3 py-1 rounded-full">Mar–Okt 2023</span>
           </div>
           <h4 class="font-semibold text-gray-700 mb-4">Pocha Gang — Sukarame, Bandar Lampung</h4>       
-<div class="grid grid-cols-2 gap-3 mb-5">
-  <figure>
-    <img src="Sertifikat_Pocha.png" alt="Sertifikat pengalaman di Pocha Gang" class="rounded-lg w-full h-44 object-contain bg-white border border-gray-200">
-    <figcaption class="text-xs text-gray-500 mt-2">Sertifikat Pocha Gang</figcaption>
-  </figure>
-  <figure>
-    <img src="kitchen_pocha.jpeg" alt="Dokumentasi pekerjaan di dapur Pocha Gang" class="rounded-lg w-full h-44 object-cover">
-    <figcaption class="text-xs text-gray-500 mt-2">Dokumentasi pekerjaan</figcaption>
-  </figure>
-</div>
+<figure class="mb-4">
+  <img src="kitchen_pocha.jpeg" alt="Dokumentasi pekerjaan di dapur Pocha Gang" class="rounded-lg w-full h-48 object-cover">
+  <figcaption class="text-xs text-gray-500 mt-2">Dokumentasi pekerjaan</figcaption>
+</figure>
+<a href="Sertifikat_Pocha.png" target="_blank" rel="noopener noreferrer"
+   class="inline-flex items-center gap-2 mb-5 text-sm font-semibold text-navy border border-navy/20 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
+   <i class="fas fa-certificate text-gold" aria-hidden="true"></i> Lihat Sertifikat Pengalaman Pocha Gang
+</a>
           <ul class="list-disc list-inside text-gray-600 space-y-2">
             <li>Mendukung operasional dapur harian dan persiapan bahan makanan.</li>
             <li>Memantau persediaan bahan dan kebutuhan operasional.</li>
@@ -288,52 +304,92 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Intro to Programming (2).png" alt="Kaggle Intro to Programming" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Intro to Programming (2).png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Intro to Programming (2).png" alt="Kaggle Intro to Programming" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Intro to Programming <span class="block text-xs text-gray-500">Februari 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Intro to Machine Learning (2).png" alt="Kaggle Intro to Machine Learning" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Intro to Machine Learning (2).png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Intro to Machine Learning (2).png" alt="Kaggle Intro to Machine Learning" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Intro to Machine Learning <span class="block text-xs text-gray-500">Maret 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Intermediate Machine Learning (2).png" alt="Kaggle Intermediate Machine Learning" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Intermediate Machine Learning (2).png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Intermediate Machine Learning (2).png" alt="Kaggle Intermediate Machine Learning" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Intermediate Machine Learning <span class="block text-xs text-gray-500">Maret 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Data Visualization.png" alt="Kaggle Data Visualization" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Data Visualization.png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Data Visualization.png" alt="Kaggle Data Visualization" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Data Visualization <span class="block text-xs text-gray-500">Juni 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Feature Engineering (2).png" alt="Kaggle Feature Engineering" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Feature Engineering (2).png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Feature Engineering (2).png" alt="Kaggle Feature Engineering" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Feature Engineering <span class="block text-xs text-gray-500">Maret 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Intro to Deep Learning (3).png" alt="Kaggle Intro to Deep Learning" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Intro to Deep Learning (3).png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Intro to Deep Learning (3).png" alt="Kaggle Intro to Deep Learning" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Intro to Deep Learning <span class="block text-xs text-gray-500">April 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Time Series.png" alt="Kaggle Time Series" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Time Series.png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Time Series.png" alt="Kaggle Time Series" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Time Series <span class="block text-xs text-gray-500">Juni 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Data Cleaning (2).png" alt="Kaggle Data Cleaning" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Data Cleaning (2).png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Data Cleaning (2).png" alt="Kaggle Data Cleaning" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Data Cleaning <span class="block text-xs text-gray-500">Maret 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Intro to AI Ethics.png" alt="Kaggle Intro to AI Ethics" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Intro to AI Ethics.png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Intro to AI Ethics.png" alt="Kaggle Intro to AI Ethics" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Intro to AI Ethics <span class="block text-xs text-gray-500">Juni 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Ilham Wijaya 122 088 - Machine Learning Explainability (1).png" alt="Kaggle Machine Learning Explainability" loading="lazy" class="w-full h-44 object-contain"/>
+            <a href="Ilham Wijaya 122 088 - Machine Learning Explainability (1).png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Ilham Wijaya 122 088 - Machine Learning Explainability (1).png" alt="Kaggle Machine Learning Explainability" loading="lazy" class="w-full h-44 object-contain"/>
+
+            </a>
             <figcaption class="text-sm mt-2">Machine Learning Explainability <span class="block text-xs text-gray-500">Juni 2026</span></figcaption>
           </figure>
         </div>
@@ -346,12 +402,20 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Freeflyer-Level1-1.png" alt="FreeFlyer Level 1" loading="lazy" class="w-full h-44 object-contain">
+            <a href="Freeflyer-Level1-1.png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Freeflyer-Level1-1.png" alt="FreeFlyer Level 1" loading="lazy" class="w-full h-44 object-contain">
+
+            </a>
             <figcaption class="text-sm mt-2">FreeFlyer Level 1 <span class="block text-xs text-gray-500">4 Juni 2026</span></figcaption>
           </figure>
 
           <figure class="bg-white rounded-lg border p-3">
-            <img src="Freeflyer-Level2-1.png" alt="FreeFlyer Level 2" loading="lazy" class="w-full h-44 object-contain">
+            <a href="Freeflyer-Level2-1.png" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat">
+
+              <img src="Freeflyer-Level2-1.png" alt="FreeFlyer Level 2" loading="lazy" class="w-full h-44 object-contain">
+
+            </a>
             <figcaption class="text-sm mt-2">FreeFlyer Level 2 <span class="block text-xs text-gray-500">18 Juni 2026</span></figcaption>
           </figure>
         </div>
@@ -397,72 +461,137 @@
 </section>
 
   
-<!-- Sertifikasi HR dan Excel -->
-<section id="sertifikasi-baru" class="py-20 px-4 bg-white">
+<!-- Sertifikasi tambahan: lokasi file berada di root repository -->
+<section id="sertifikasi-baru" class="py-16 md:py-20 px-4 bg-light">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-navy text-center mb-2">
-      Pelatihan HR & Microsoft Excel
-    </h2>
-    <div class="w-16 h-1 bg-gold mx-auto mb-10"></div>
+    <h2 class="section-heading text-3xl font-bold text-navy text-center">Pelatihan HR &amp; Microsoft Excel</h2>
+    <p class="max-w-3xl text-gray-600 text-center mt-8 mb-10 mx-auto leading-relaxed">
+      Sertifikat pembelajaran yang mendukung kemampuan administrasi, analisis data,
+      dan pengembangan kompetensi di bidang Human Resources.
+      Klik kartu untuk membuka dokumen sertifikat asli.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="hr-basics.pdf" target="_blank" rel="noopener noreferrer"
+           class="group block h-full rounded-xl bg-white border border-gray-200 p-4 shadow-sm hover:shadow-lg hover:border-gold transition"
+           aria-label="Lihat sertifikat HR Basics">
+          <div class="pdf-preview relative h-44 bg-white rounded-lg border border-gray-200 overflow-hidden" data-pdf-preview="hr-basics.pdf">
+            <div class="pdf-fallback h-full flex flex-col items-center justify-center gap-2 text-gray-500 text-center px-4">
+              <i class="fas fa-file-pdf text-4xl text-red-500" aria-hidden="true"></i>
+              <span class="text-xs">Pratinjau sertifikat PDF</span>
+            </div>
+            <canvas class="hidden w-full h-full object-contain" aria-label="Pratinjau halaman pertama HR Basics"></canvas>
+          </div>
+          <div class="pt-4">
+            <p class="text-xs font-bold tracking-wide uppercase text-gold">HR</p>
+            <h3 class="font-bold text-navy mt-1 min-h-[2.75rem] leading-snug">HR Basics</h3>
+            <p class="text-sm text-gray-500 mt-2">Cursa</p>
+            <p class="text-sm font-semibold text-blue-700 group-hover:underline mt-3"><i class="fas fa-arrow-up-right-from-square mr-1" aria-hidden="true"></i> Lihat sertifikat</p>
+          </div>
+        </a>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="hr-analytics.pdf" target="_blank" rel="noopener noreferrer"
+           class="group block h-full rounded-xl bg-white border border-gray-200 p-4 shadow-sm hover:shadow-lg hover:border-gold transition"
+           aria-label="Lihat sertifikat HR Analytics Course">
+          <div class="pdf-preview relative h-44 bg-white rounded-lg border border-gray-200 overflow-hidden" data-pdf-preview="hr-analytics.pdf">
+            <div class="pdf-fallback h-full flex flex-col items-center justify-center gap-2 text-gray-500 text-center px-4">
+              <i class="fas fa-file-pdf text-4xl text-red-500" aria-hidden="true"></i>
+              <span class="text-xs">Pratinjau sertifikat PDF</span>
+            </div>
+            <canvas class="hidden w-full h-full object-contain" aria-label="Pratinjau halaman pertama HR Analytics Course"></canvas>
+          </div>
+          <div class="pt-4">
+            <p class="text-xs font-bold tracking-wide uppercase text-gold">HR</p>
+            <h3 class="font-bold text-navy mt-1 min-h-[2.75rem] leading-snug">HR Analytics Course</h3>
+            <p class="text-sm text-gray-500 mt-2">Simplilearn SkillUp</p>
+            <p class="text-sm font-semibold text-blue-700 group-hover:underline mt-3"><i class="fas fa-arrow-up-right-from-square mr-1" aria-hidden="true"></i> Lihat sertifikat</p>
+          </div>
+        </a>
 
-      <a href="certificates/hr-basics.pdf" target="_blank"
-         rel="noopener noreferrer"
-         class="bg-gray-50 p-6 rounded-xl border shadow-sm hover:shadow-lg transition">
-        <h3 class="font-bold text-navy">HR Basics</h3>
-        <p class="text-sm text-gray-500 mt-2">Cursa</p>
-        <p class="text-sm text-blue-700 mt-4">Lihat Sertifikat →</p>
-      </a>
+        <a href="copilot-hr.pdf" target="_blank" rel="noopener noreferrer"
+           class="group block h-full rounded-xl bg-white border border-gray-200 p-4 shadow-sm hover:shadow-lg hover:border-gold transition"
+           aria-label="Lihat sertifikat Microsoft 365 Copilot for HR Professionals">
+          <div class="pdf-preview relative h-44 bg-white rounded-lg border border-gray-200 overflow-hidden" data-pdf-preview="copilot-hr.pdf">
+            <div class="pdf-fallback h-full flex flex-col items-center justify-center gap-2 text-gray-500 text-center px-4">
+              <i class="fas fa-file-pdf text-4xl text-red-500" aria-hidden="true"></i>
+              <span class="text-xs">Pratinjau sertifikat PDF</span>
+            </div>
+            <canvas class="hidden w-full h-full object-contain" aria-label="Pratinjau halaman pertama Microsoft 365 Copilot for HR Professionals"></canvas>
+          </div>
+          <div class="pt-4">
+            <p class="text-xs font-bold tracking-wide uppercase text-gold">HR</p>
+            <h3 class="font-bold text-navy mt-1 min-h-[2.75rem] leading-snug">Microsoft 365 Copilot for HR Professionals</h3>
+            <p class="text-sm text-gray-500 mt-2">Simplilearn SkillUp</p>
+            <p class="text-sm font-semibold text-blue-700 group-hover:underline mt-3"><i class="fas fa-arrow-up-right-from-square mr-1" aria-hidden="true"></i> Lihat sertifikat</p>
+          </div>
+        </a>
 
-      <a href="certificates/hr-analytics.pdf" target="_blank"
-         rel="noopener noreferrer"
-         class="bg-gray-50 p-6 rounded-xl border shadow-sm hover:shadow-lg transition">
-        <h3 class="font-bold text-navy">HR Analytics Course</h3>
-        <p class="text-sm text-gray-500 mt-2">Simplilearn</p>
-        <p class="text-sm text-blue-700 mt-4">Lihat Sertifikat →</p>
-      </a>
+        <a href="manajemen-sdm.png" target="_blank" rel="noopener noreferrer"
+           class="group block h-full rounded-xl bg-white border border-gray-200 p-4 shadow-sm hover:shadow-lg hover:border-gold transition"
+           aria-label="Lihat sertifikat Manajemen Sumber Daya Manusia">
+          <div class="h-44 bg-white rounded-lg border border-gray-200 overflow-hidden">
+            <img src="manajemen-sdm.png" alt="Sertifikat Manajemen Sumber Daya Manusia" loading="lazy" class="w-full h-full object-contain" />
+          </div>
+          <div class="pt-4">
+            <p class="text-xs font-bold tracking-wide uppercase text-gold">HR</p>
+            <h3 class="font-bold text-navy mt-1 min-h-[2.75rem] leading-snug">Manajemen Sumber Daya Manusia</h3>
+            <p class="text-sm text-gray-500 mt-2">Bakerspice Academy / BISA AI</p>
+            <p class="text-sm font-semibold text-blue-700 group-hover:underline mt-3"><i class="fas fa-arrow-up-right-from-square mr-1" aria-hidden="true"></i> Lihat sertifikat</p>
+          </div>
+        </a>
 
-      <a href="certificates/copilot-hr.pdf" target="_blank"
-         rel="noopener noreferrer"
-         class="bg-gray-50 p-6 rounded-xl border shadow-sm hover:shadow-lg transition">
-        <h3 class="font-bold text-navy">Microsoft 365 Copilot for HR Professionals</h3>
-        <p class="text-sm text-gray-500 mt-2">Simplilearn</p>
-        <p class="text-sm text-blue-700 mt-4">Lihat Sertifikat →</p>
-      </a>
+        <a href="excel-dashboard.pdf" target="_blank" rel="noopener noreferrer"
+           class="group block h-full rounded-xl bg-white border border-gray-200 p-4 shadow-sm hover:shadow-lg hover:border-gold transition"
+           aria-label="Lihat sertifikat Excel Dashboard for Beginners">
+          <div class="pdf-preview relative h-44 bg-white rounded-lg border border-gray-200 overflow-hidden" data-pdf-preview="excel-dashboard.pdf">
+            <div class="pdf-fallback h-full flex flex-col items-center justify-center gap-2 text-gray-500 text-center px-4">
+              <i class="fas fa-file-pdf text-4xl text-red-500" aria-hidden="true"></i>
+              <span class="text-xs">Pratinjau sertifikat PDF</span>
+            </div>
+            <canvas class="hidden w-full h-full object-contain" aria-label="Pratinjau halaman pertama Excel Dashboard for Beginners"></canvas>
+          </div>
+          <div class="pt-4">
+            <p class="text-xs font-bold tracking-wide uppercase text-gold">Excel</p>
+            <h3 class="font-bold text-navy mt-1 min-h-[2.75rem] leading-snug">Excel Dashboard for Beginners</h3>
+            <p class="text-sm text-gray-500 mt-2">Pelatihan Microsoft Excel</p>
+            <p class="text-sm font-semibold text-blue-700 group-hover:underline mt-3"><i class="fas fa-arrow-up-right-from-square mr-1" aria-hidden="true"></i> Lihat sertifikat</p>
+          </div>
+        </a>
 
-      <a href="certificates/manajemen-sdm.png" target="_blank"
-         rel="noopener noreferrer"
-         class="bg-gray-50 p-6 rounded-xl border shadow-sm hover:shadow-lg transition">
-        <h3 class="font-bold text-navy">Manajemen Sumber Daya Manusia</h3>
-        <p class="text-sm text-gray-500 mt-2">Bakerspice Academy / BISA AI</p>
-        <p class="text-sm text-blue-700 mt-4">Lihat Sertifikat →</p>
-      </a>
+        <a href="Excel-Beginners-Level.pdf" target="_blank" rel="noopener noreferrer"
+           class="group block h-full rounded-xl bg-white border border-gray-200 p-4 shadow-sm hover:shadow-lg hover:border-gold transition"
+           aria-label="Lihat sertifikat Excel Beginners Level">
+          <div class="pdf-preview relative h-44 bg-white rounded-lg border border-gray-200 overflow-hidden" data-pdf-preview="Excel-Beginners-Level.pdf">
+            <div class="pdf-fallback h-full flex flex-col items-center justify-center gap-2 text-gray-500 text-center px-4">
+              <i class="fas fa-file-pdf text-4xl text-red-500" aria-hidden="true"></i>
+              <span class="text-xs">Pratinjau sertifikat PDF</span>
+            </div>
+            <canvas class="hidden w-full h-full object-contain" aria-label="Pratinjau halaman pertama Excel Beginners Level"></canvas>
+          </div>
+          <div class="pt-4">
+            <p class="text-xs font-bold tracking-wide uppercase text-gold">Excel</p>
+            <h3 class="font-bold text-navy mt-1 min-h-[2.75rem] leading-snug">Excel Beginners Level</h3>
+            <p class="text-sm text-gray-500 mt-2">Cursa</p>
+            <p class="text-sm font-semibold text-blue-700 group-hover:underline mt-3"><i class="fas fa-arrow-up-right-from-square mr-1" aria-hidden="true"></i> Lihat sertifikat</p>
+          </div>
+        </a>
 
-      <a href="certificates/excel-dashboard.pdf" target="_blank"
-         rel="noopener noreferrer"
-         class="bg-gray-50 p-6 rounded-xl border shadow-sm hover:shadow-lg transition">
-        <h3 class="font-bold text-navy">Excel Dashboard for Beginners</h3>
-        <p class="text-sm text-gray-500 mt-2">Microsoft Excel</p>
-        <p class="text-sm text-blue-700 mt-4">Lihat Sertifikat →</p>
-      </a>
-
-      <a href="certificates/excel-beginners-level.pdf" target="_blank"
-         rel="noopener noreferrer"
-         class="bg-gray-50 p-6 rounded-xl border shadow-sm hover:shadow-lg transition">
-        <h3 class="font-bold text-navy">Excel Beginners Level</h3>
-        <p class="text-sm text-gray-500 mt-2">Cursa</p>
-        <p class="text-sm text-blue-700 mt-4">Lihat Sertifikat →</p>
-      </a>
-
-      <a href="certificates/excel-for-beginners.pdf" target="_blank"
-         rel="noopener noreferrer"
-         class="bg-gray-50 p-6 rounded-xl border shadow-sm hover:shadow-lg transition">
-        <h3 class="font-bold text-navy">Excel for Beginners</h3>
-        <p class="text-sm text-gray-500 mt-2">Cursa</p>
-        <p class="text-sm text-blue-700 mt-4">Lihat Sertifikat →</p>
-      </a>
-
+        <a href="Excel-for-Beginners.pdf" target="_blank" rel="noopener noreferrer"
+           class="group block h-full rounded-xl bg-white border border-gray-200 p-4 shadow-sm hover:shadow-lg hover:border-gold transition"
+           aria-label="Lihat sertifikat Excel for Beginners">
+          <div class="pdf-preview relative h-44 bg-white rounded-lg border border-gray-200 overflow-hidden" data-pdf-preview="Excel-for-Beginners.pdf">
+            <div class="pdf-fallback h-full flex flex-col items-center justify-center gap-2 text-gray-500 text-center px-4">
+              <i class="fas fa-file-pdf text-4xl text-red-500" aria-hidden="true"></i>
+              <span class="text-xs">Pratinjau sertifikat PDF</span>
+            </div>
+            <canvas class="hidden w-full h-full object-contain" aria-label="Pratinjau halaman pertama Excel for Beginners"></canvas>
+          </div>
+          <div class="pt-4">
+            <p class="text-xs font-bold tracking-wide uppercase text-gold">Excel</p>
+            <h3 class="font-bold text-navy mt-1 min-h-[2.75rem] leading-snug">Excel for Beginners</h3>
+            <p class="text-sm text-gray-500 mt-2">Cursa</p>
+            <p class="text-sm font-semibold text-blue-700 group-hover:underline mt-3"><i class="fas fa-arrow-up-right-from-square mr-1" aria-hidden="true"></i> Lihat sertifikat</p>
+          </div>
+        </a>
     </div>
   </div>
 </section>
@@ -484,5 +613,52 @@
   <footer class="bg-navy text-center py-6">
     <p class="text-gray-300 text-sm">© 2026 Ilham Wijaya. Dibangun dengan HTML5 dan Tailwind CSS.</p>
   </footer>
+  <script>
+    // Menu navigasi untuk layar ponsel.
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('hidden') === false;
+        menuButton.setAttribute('aria-expanded', String(open));
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    // Ubah halaman pertama sertifikat PDF menjadi gambar pratinjau di kartu.
+    // PDF tetap dibuka dalam tab baru saat kartunya diklik.
+    async function renderCertificatePreviews() {
+      if (!window.pdfjsLib) return; // CDNs diblokir? Ikon fallback tetap muncul.
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+      const previews = document.querySelectorAll('[data-pdf-preview]');
+      await Promise.all(Array.from(previews, async (wrapper) => {
+        const canvas = wrapper.querySelector('canvas');
+        const fallback = wrapper.querySelector('.pdf-fallback');
+        const pdfPath = wrapper.getAttribute('data-pdf-preview');
+        try {
+          const loadingTask = window.pdfjsLib.getDocument(pdfPath);
+          const pdf = await loadingTask.promise;
+          const page = await pdf.getPage(1);
+          const base = page.getViewport({ scale: 1 });
+          const viewport = page.getViewport({ scale: Math.min(1.5, 820 / base.width) });
+          const context = canvas.getContext('2d');
+          canvas.width = Math.round(viewport.width);
+          canvas.height = Math.round(viewport.height);
+          await page.render({ canvasContext: context, viewport }).promise;
+          canvas.classList.remove('hidden');
+          fallback.classList.add('hidden');
+        } catch (error) {
+          // Biarkan fallback terlihat dan link ke PDF tetap bisa diklik.
+          console.warn('Pratinjau PDF tidak tersedia:', pdfPath, error);
+        }
+      }));
+    }
+    window.addEventListener('load', renderCertificatePreviews);
+  </script>
 </body>
 </html>
