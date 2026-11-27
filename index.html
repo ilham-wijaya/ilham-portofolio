@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portofolio Ilham Wijaya: data analytics, administrasi, HR, operasional, dan teknologi.">
-  <title>Ilham Wijaya | Sains Atmosfer dan Keplanetan</title>
+  <meta name="description" content="Portofolio Ilham Wijaya, lulusan Sains Atmosfir dan Keplanetan ITERA: meteorologi, klimatologi, instrumentasi, pemantauan lingkungan, teknologi antariksa, dan analisis data.">
+  <title>Ilham Wijaya | Sains Atmosfir dan Keplanetan</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,12 +25,32 @@
   </script>
 
   <style>
+    html { font-size: 17px; }
+
+    @media (min-width: 768px) {
+      html { font-size: 18px; }
+    }
+
     body {
       font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
+
+    .card h3, .card h4 { line-height: 1.4; }
+    #skills h3 { line-height: 1.4; }
+    #skills p { color: #f1f5f9; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid #D4AF37;
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 639px) {
+      #contact a[href^="mailto:"] { overflow-wrap: anywhere; }
     }
 
     section[id], header[id] {
-      scroll-margin-top: 76px;
+      scroll-margin-top: 92px;
     }
 
     .heading::after {
@@ -46,12 +66,17 @@
       background: white;
       border: 1px solid #e5e7eb;
       border-radius: 14px;
-      padding: 22px;
+      padding: 24px;
+      min-width: 0;
+    }
+
+    @media (max-width: 639px) {
+      .card { padding: 18px; }
     }
 
     .certificate-image {
       width: 100%;
-      height: 190px;
+      height: 210px;
       object-fit: contain;
       background: white;
       border-radius: 8px;
@@ -59,7 +84,7 @@
 
     .pdf-preview {
       width: 100%;
-      height: 190px;
+      height: 210px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -70,7 +95,7 @@
 
     .pdf-preview canvas {
       max-width: 100%;
-      max-height: 190px;
+      max-height: 210px;
       object-fit: contain;
     }
 
@@ -78,7 +103,7 @@
       display: inline-block;
       margin-top: 12px;
       color: #0B2447;
-      font-size: 14px;
+      font-size: 1rem;
       font-weight: 700;
     }
   </style>
@@ -90,12 +115,12 @@
 
   <!-- NAVIGATION -->
   <nav class="fixed top-0 inset-x-0 bg-white/95 shadow z-50">
-    <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
       <a href="#home" class="font-extrabold text-2xl text-navy">
         IW<span class="text-gold">.</span>
       </a>
 
-      <div class="hidden lg:flex gap-5 text-sm font-semibold text-navy">
+      <div class="hidden xl:flex gap-4 text-sm font-semibold text-navy">
         <a href="#about">Tentang</a>
         <a href="#projects">Proyek</a>
         <a href="#experience">Pengalaman</a>
@@ -109,7 +134,7 @@
       <button
         id="menuButton"
         type="button"
-        class="lg:hidden p-2 text-navy"
+        class="xl:hidden p-2 text-navy"
         aria-label="Buka menu"
         aria-expanded="false"
         aria-controls="mobileMenu">
@@ -117,8 +142,8 @@
       </button>
     </div>
 
-    <div id="mobileMenu" class="hidden lg:hidden bg-white p-4 border-t">
-      <div class="grid grid-cols-2 gap-4 text-sm text-navy font-semibold">
+    <div id="mobileMenu" class="hidden xl:hidden bg-white p-4 border-t">
+      <div class="grid grid-cols-2 gap-4 text-base text-navy font-semibold">
         <a href="#about">Tentang</a>
         <a href="#projects">Proyek</a>
         <a href="#experience">Pengalaman</a>
@@ -149,12 +174,16 @@
         Ilham Wijaya
       </h1>
 
-      <h2 class="text-lg md:text-2xl font-semibold text-gray-600 mb-5">
-        S1 Sains Atmosfer dan Keplanetan · Institut Teknologi Sumatera
+      <h2 class="text-xl md:text-3xl font-semibold text-gray-600 mb-3">
+        S1 Sains Atmosfir dan Keplanetan · Institut Teknologi Sumatera
       </h2>
 
-      <p class="text-gray-600 leading-8 max-w-3xl mb-7">
-        Saya Ilham, lulusan Sains Atmosfer dan Keplanetan ITERA dengan IPK 3,34/4,00. Saya tertarik pada cara instrumen merekam perubahan lingkungan dan bagaimana hasil pengukurannya dapat digunakan untuk membuat prediksi. Selama kuliah, saya mengembangkan sistem pemantauan tinggi muka air, mengerjakan prototipe sensor lingkungan saat magang di PLN Nusantara Power, dan mendampingi mahasiswa dalam praktikum komputasi serta observasi.
+      <p class="text-base md:text-lg font-semibold text-navy mb-5">
+        Atmospheric &amp; Planetary Science · Meteorology · Instrumentation · Data Analytics
+      </p>
+
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-7">
+        Lulusan S1 Sains Atmosfir dan Keplanetan ITERA dengan IPK 3,37/4,00. Saya memiliki ketertarikan pada meteorologi, klimatologi, pemantauan lingkungan, instrumentasi, dan teknologi antariksa. Pengalaman saya mencakup pengembangan sistem pemantauan dan prediksi tinggi muka air berbasis IoT, magang instrumentasi di PLN Nusantara Power, serta pendampingan praktikum komputasi dan observasi. Saya ingin menerapkan sains, teknologi, dan analisis data untuk mendukung riset serta pemantauan lingkungan.
       </p>
 
       <div class="flex flex-wrap justify-center gap-3">
@@ -180,16 +209,16 @@
   <section id="about" class="py-16 px-4 bg-white">
     <div class="max-w-4xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-navy text-center">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-navy text-center">
         Tentang Saya
       </h2>
 
-      <div class="mt-10 text-gray-600 leading-8 space-y-4">
+      <div class="mt-10 text-gray-700 text-base md:text-lg leading-relaxed space-y-5">
 
-        <p>Di Institut Teknologi Sumatera (2022–2026), saya menekuni instrumentasi, observasi, dan komputasi dalam program studi Sains Atmosfer dan Keplanetan. Dalam tugas akhir, saya menggunakan sensor ultrasonik JSN-SR04T dan ESP32 untuk memantau tinggi muka air. Saya kemudian mengolah data pengukuran dengan Python, menyiapkan fitur untuk model XGBoost, dan menyajikan hasil prediksi melalui dasbor. Pada proyek DIY IoT Rover, saya memadukan ESP32, sensor BMP280 dan DHT11, serta ESP32-CAM untuk mengamati kondisi lingkungan.</p>
+        <p>Di Institut Teknologi Sumatera (2022–2026), saya mempelajari sains atmosfer dan keplanetan, dengan minat pada meteorologi, klimatologi, instrumentasi, observasi, serta komputasi ilmiah. Dalam tugas akhir, saya menggunakan sensor ultrasonik JSN-SR04T dan ESP32 untuk memantau tinggi muka air. Saya kemudian mengolah data pengukuran dengan Python, menyiapkan fitur untuk model XGBoost, dan menyajikan hasil prediksi melalui dasbor. Pada proyek DIY IoT Rover, saya memadukan ESP32, sensor BMP280 dan DHT11, serta ESP32-CAM untuk mengamati kondisi lingkungan.</p>
         <p>Saat magang di bagian Instrumentation &amp; Control PT PLN Nusantara Power UP Muara Tawar, saya ikut mengembangkan prototipe pemantauan lingkungan. Tugas saya mencakup pemeriksaan data sensor, visualisasi melalui ThingSpeak, pengujian perangkat, dan dokumentasi sistem. Pengalaman ini memberi saya kesempatan untuk mengikuti alur kerja dari pembacaan sensor hingga penyajian hasilnya.</p>
         <p>Saya juga menjadi asisten praktikum untuk dua mata kuliah di ITERA. Pada praktikum komputasi atmosfer dan keplanetan, saya mendampingi mahasiswa mengolah data menggunakan Python dan Google Colab serta membantu saat program mereka mengalami kendala. Pada praktikum instrumentasi dan observasi, saya menyiapkan instrumen, mendampingi kegiatan pengamatan, dan membantu mengevaluasi tugas.</p>
-        <p>Di luar kegiatan akademik, saya memperoleh pengalaman operasional di Pocha Gang, Bandar Lampung. Saya mencatat persediaan, memantau kebutuhan pengisian stok, dan bekerja sama dengan tim dapur. Saya juga mengikuti kegiatan organisasi serta pelatihan Microsoft Excel dan dasar pengelolaan SDM untuk melengkapi keterampilan teknis saya.</p>
+        <p>Di luar kegiatan akademik, saya memperoleh pengalaman operasional di Pocha Gang, Bandar Lampung. Saya mencatat persediaan, memantau kebutuhan pengisian stok, dan bekerja sama dengan tim dapur. Untuk memperkuat kompetensi teknis, saya mengikuti pelatihan pengolahan data dan machine learning melalui Kaggle serta sertifikasi FreeFlyer Level 1 dan Level 2 untuk simulasi orbit satelit. Pengalaman organisasi, pelatihan Microsoft Excel, dan dasar pengelolaan SDM melengkapi kemampuan kerja sama dan koordinasi saya.</p>
 
         
 
@@ -201,7 +230,7 @@
   <section id="projects" class="py-16 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-navy text-center">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-navy text-center">
         Proyek Teknis & Analisis Data
       </h2>
 
@@ -213,7 +242,7 @@
             Sistem Monitoring dan Prediksi Ketinggian Air Berbasis IoT
           </h3>
 
-          <p class="text-sm text-gray-500 mt-1">
+          <p class="text-base text-gray-600 mt-1">
             Tugas Akhir | 2026
           </p>
 
@@ -239,7 +268,7 @@
               alt="Grafik Prediksi">
           </div>
 
-          <p class="text-sm leading-7">
+          <p class="text-base leading-relaxed">
             Mengembangkan sistem pemantauan dan prediksi tinggi muka air
             menggunakan ESP32, sensor JSN-SR04T, Python, rekayasa fitur,
             serta model machine learning XGBoost.
@@ -260,7 +289,7 @@
             DIY IoT Rover – ESP32 & Environmental Sensors
           </h3>
 
-          <p class="text-sm text-gray-500 mt-1">
+          <p class="text-base text-gray-600 mt-1">
             Oktober 2025–Februari 2026
           </p>
 
@@ -276,7 +305,7 @@
               alt="Sistem Kontrol Rover">
           </div>
 
-          <p class="text-sm leading-7">
+          <p class="text-base leading-relaxed">
             Merancang prototipe rover berbasis ESP32 dengan sensor
             BMP280, DHT11, serta penggunaan ESP32-CAM untuk mendukung
             pengukuran dan pemantauan parameter lingkungan.
@@ -291,7 +320,7 @@
   <section id="experience" class="py-16 px-4 bg-light">
     <div class="max-w-6xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-navy text-center">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-navy text-center">
         Pengalaman Profesional
       </h2>
 
@@ -300,11 +329,11 @@
         <!-- PLN -->
         <article class="card">
           <h3 class="text-xl text-navy font-bold">
-            Project Intern – Instrumentation & Control
+            Instrumentation and Control Intern
           </h3>
 
-          <p class="text-sm text-gray-500 mt-1">
-            PT PLN Nusantara Power UP Muara Tawar | Juli–Agustus 2025
+          <p class="text-base text-gray-600 mt-1">
+            PT PLN Nusantara Power UP Muara Tawar | Juni–Agustus 2025
           </p>
 
           <div class="grid grid-cols-2 gap-3 my-4">
@@ -319,7 +348,7 @@
               alt="Prototipe Monitoring PLN">
           </div>
 
-          <p class="text-sm leading-7">
+          <p class="text-base leading-relaxed">
             Mengembangkan prototipe monitoring lingkungan berbasis ESP32,
             melakukan pengolahan dan validasi data sensor, membuat
             visualisasi data menggunakan ThingSpeak, serta mendukung
@@ -330,10 +359,10 @@
         <!-- TEACHING ASSISTANT 1 -->
         <article class="card">
           <h3 class="text-xl text-navy font-bold">
-            Teaching Assistant – Instrumentation & Observation 2
+            Teaching Assistant – Instrumentation and Observation II
           </h3>
 
-          <p class="text-sm text-gray-500 mt-1">
+          <p class="text-base text-gray-600 mt-1">
             Institut Teknologi Sumatera | Agustus–Desember 2025
           </p>
 
@@ -349,10 +378,8 @@
               alt="Praktik Teleskop">
           </div>
 
-          <p class="text-sm leading-7">
-            Mendukung pelaksanaan praktikum, menyiapkan instrumen,
-            mendampingi mahasiswa, membantu evaluasi tugas,
-            serta melakukan dokumentasi kegiatan laboratorium.
+          <p class="text-base leading-relaxed">
+            Mendampingi praktikum instrumentasi dan observasi, menyiapkan instrumen, membantu pengambilan serta interpretasi data pengukuran, dan mendukung evaluasi tugas serta dokumentasi kegiatan praktikum.
           </p>
 
           <a
@@ -368,10 +395,10 @@
         <!-- TEACHING ASSISTANT 2 -->
         <article class="card">
           <h3 class="text-xl text-navy font-bold">
-            Teaching Assistant – Computational Atmospheric & Planetary Science
+            Teaching Assistant – Computational Atmospheric and Planetary Science
           </h3>
 
-          <p class="text-sm text-gray-500 mt-1">
+          <p class="text-base text-gray-600 mt-1">
             Institut Teknologi Sumatera | Februari–Mei 2025
           </p>
 
@@ -387,10 +414,8 @@
               alt="Pendampingan Praktikum">
           </div>
 
-          <p class="text-sm leading-7">
-            Mendampingi mahasiswa menggunakan Python dan Google Colab,
-            membantu pengolahan data, evaluasi tugas, dan penyelesaian
-            kendala teknis selama kegiatan praktikum.
+          <p class="text-base leading-relaxed">
+            Mendampingi mahasiswa menggunakan Python dan Google Colab untuk komputasi ilmiah, pengolahan, analisis, serta visualisasi data. Membantu evaluasi tugas dan penyelesaian kendala teknis selama praktikum.
           </p>
 
           <a
@@ -409,7 +434,7 @@
             Kitchen Staff & Inventory Intern
           </h3>
 
-          <p class="text-sm text-gray-500 mt-1">
+          <p class="text-base text-gray-600 mt-1">
             Pocha Gang, Bandar Lampung | Maret–Oktober 2023
           </p>
 
@@ -418,7 +443,7 @@
             alt="Dokumentasi Pocha Gang"
             class="w-full h-40 object-cover rounded-lg my-4">
 
-          <p class="text-sm leading-7">
+          <p class="text-base leading-relaxed">
             Mendukung kegiatan operasional dapur, melakukan pencatatan
             dan pemantauan persediaan, membantu mengidentifikasi
             kebutuhan pengisian ulang stok, dan bekerja sama dengan
@@ -443,7 +468,7 @@
   <section id="education" class="py-16 px-4 bg-light">
     <div class="max-w-4xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-navy text-center">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-navy text-center">
         Pendidikan
       </h2>
 
@@ -453,11 +478,11 @@
         </h3>
 
         <p class="mt-2 text-gray-600">
-          Sarjana Sains (S.Si.) – Sains Atmosfer dan Keplanetan
+          Sarjana Sains (S.Si.) – Sains Atmosfir dan Keplanetan
         </p>
 
         <p class="text-gray-500 mt-2">
-          2022–2026 · IPK 3,34/4,00
+          2022–2026 · IPK 3,37/4,00
         </p>
       </div>
 
@@ -468,17 +493,17 @@
   <section id="leadership" class="py-16 px-4 bg-white">
     <div class="max-w-5xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-navy text-center">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-navy text-center">
         Organisasi & Kepemimpinan
       </h2>
 
       <div class="grid md:grid-cols-3 gap-5 mt-10">
 
         <div class="card">
-          <h3 class="font-bold text-navy">
+          <h3 class="text-lg font-bold text-navy">
             Wakil Ketua KKN
           </h3>
-          <p class="text-sm mt-2 leading-7">
+          <p class="text-base mt-2 leading-relaxed">
             ITERA, Agustus 2026. Membantu mengoordinasikan
             pembagian tugas anggota dan pelaksanaan program
             pengabdian kepada masyarakat.
@@ -486,10 +511,10 @@
         </div>
 
         <div class="card">
-          <h3 class="font-bold text-navy">
+          <h3 class="text-lg font-bold text-navy">
             Ketua Divisi Acara
           </h3>
-          <p class="text-sm mt-2 leading-7">
+          <p class="text-base mt-2 leading-relaxed">
             Campus Student Gathering. Mengoordinasikan persiapan acara,
             penyusunan jadwal, pembagian tanggung jawab,
             dan kerja sama antar divisi.
@@ -497,10 +522,10 @@
         </div>
 
         <div class="card">
-          <h3 class="font-bold text-navy">
+          <h3 class="text-lg font-bold text-navy">
             HIMASAKA Arkananta
           </h3>
-          <p class="text-sm mt-2 leading-7">
+          <p class="text-base mt-2 leading-relaxed">
             Anggota Divisi Edukasi & Profesi (2025–2026)
             dan Divisi Manajemen Mutu Anggota (2024–2025).
           </p>
@@ -514,60 +539,35 @@
   <section id="skills" class="py-16 px-4 bg-navy text-white">
     <div class="max-w-6xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-center">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-center">
         Keahlian
       </h2>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-
         <div class="bg-white/10 rounded-xl p-5">
-          <h3 class="text-gold font-bold">
-            IoT & Instrumentation
-          </h3>
-          <p class="text-sm leading-7 mt-2">
-            ESP32, Sensor Lingkungan, Akuisisi Data,
-            Monitoring, Kalibrasi, dan Pengujian Perangkat.
-          </p>
+          <h3 class="text-gold text-lg font-bold">Sains Atmosfer &amp; Lingkungan</h3>
+          <p class="text-base leading-relaxed mt-2">Meteorologi, klimatologi, sains atmosfer, observasi, interpretasi data pengukuran, serta pemantauan parameter lingkungan.</p>
         </div>
-<div class="bg-white/10 rounded-xl p-5">
-          <h3 class="text-gold font-bold">
-            Data & Analytics
-          </h3>
-          <p class="text-sm leading-7 mt-2">
-            Microsoft Excel, Python, Pandas, Data Cleaning,
-            Validasi Data, Analisis Statistik, dan Visualisasi Data.
-          </p>
+        <div class="bg-white/10 rounded-xl p-5">
+          <h3 class="text-gold text-lg font-bold">Instrumentasi &amp; IoT</h3>
+          <p class="text-base leading-relaxed mt-2">Instrumentasi meteorologi, ESP32, integrasi sensor, akuisisi data, kalibrasi, monitoring, pengujian perangkat, dan ThingSpeak.</p>
         </div>
-<div class="bg-white/10 rounded-xl p-5">
-          <h3 class="text-gold font-bold">
-            Machine Learning
-          </h3>
-          <p class="text-sm leading-7 mt-2">
-            XGBoost, Regression, Data Preprocessing,
-            Feature Engineering, dan Evaluasi Model.
-          </p>
+        <div class="bg-white/10 rounded-xl p-5">
+          <h3 class="text-gold text-lg font-bold">Sains Antariksa &amp; Simulasi Orbit</h3>
+          <p class="text-base leading-relaxed mt-2">Simulasi orbit satelit menggunakan FreeFlyer, didukung sertifikasi FreeFlyer Level 1 dan Level 2.</p>
         </div>
-<div class="bg-white/10 rounded-xl p-5">
-          <h3 class="text-gold font-bold">
-            Tools & Teamwork
-          </h3>
-          <p class="text-sm leading-7 mt-2">
-            Microsoft Excel, Google Colab, Jupyter Notebook,
-            ThingSpeak, Komunikasi, Koordinasi Tim,
-            Problem Solving, dan Adaptabilitas.
-          </p>
+        <div class="bg-white/10 rounded-xl p-5">
+          <h3 class="text-gold text-lg font-bold">Analisis Data &amp; Komputasi</h3>
+          <p class="text-base leading-relaxed mt-2">Python, Pandas, Microsoft Excel, data cleaning, validasi data, analisis statistik, visualisasi data, Google Colab, dan Jupyter Notebook.</p>
         </div>
-<div class="bg-white/10 rounded-xl p-5">
-          <h3 class="text-gold font-bold">
-            Administration & Operations
-          </h3>
-          <p class="text-sm leading-7 mt-2">
-            Dokumentasi kegiatan, pencatatan stok,
-            pengolahan data, koordinasi kegiatan,
-            monitoring persediaan, dan pelaporan.
-          </p>
+        <div class="bg-white/10 rounded-xl p-5">
+          <h3 class="text-gold text-lg font-bold">Machine Learning</h3>
+          <p class="text-base leading-relaxed mt-2">XGBoost, regresi, data preprocessing, feature engineering, evaluasi model, dan analisis deret waktu (Time Series).</p>
         </div>
-
+        <div class="bg-white/10 rounded-xl p-5">
+          <h3 class="text-gold text-lg font-bold">Kerja Sama &amp; Operasional</h3>
+          <p class="text-base leading-relaxed mt-2">Problem solving, komunikasi, koordinasi tim, adaptabilitas, dokumentasi teknis, pelaporan, dan pencatatan serta pemantauan persediaan.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -576,18 +576,9 @@
   <section id="other-certificates" class="py-16 px-4 bg-light">
     <div class="max-w-6xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-navy text-center">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-navy text-center">
         Sertifikat Teknis dan Bahasa Inggris
       </h2>
-
-      <h3 class="text-xl font-bold text-navy mt-10 mb-4">
-        Kaggle
-      </h3>
-
-      <div
-        id="kaggleGrid"
-        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-      </div>
 
       <h3 class="text-xl font-bold text-navy mt-10 mb-4">
         FreeFlyer
@@ -596,6 +587,15 @@
       <div
         id="freeflyerGrid"
         class="grid sm:grid-cols-2 gap-5">
+      </div>
+
+      <h3 class="text-xl font-bold text-navy mt-10 mb-4">
+        Kaggle
+      </h3>
+
+      <div
+        id="kaggleGrid"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
       </div>
 
       <h3 class="text-xl font-bold text-navy mt-10 mb-4">
@@ -610,7 +610,7 @@
           target="_blank"
           rel="noopener noreferrer">
 
-          <h4 class="font-bold text-navy">
+          <h4 class="text-lg font-bold text-navy">
             ITERA English Proficiency Test (InCiTe)
           </h4>
 
@@ -630,7 +630,7 @@
           target="_blank"
           rel="noopener noreferrer">
 
-          <h4 class="font-bold text-navy">
+          <h4 class="text-lg font-bold text-navy">
             Brighten English Pare Kediri – TOEFL Test
           </h4>
 
@@ -652,7 +652,7 @@
   <section id="hr-certificates" class="py-16 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-navy text-center">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-navy text-center">
         Pelatihan Tambahan · SDM dan Microsoft Excel
       </h2>
 
@@ -672,7 +672,7 @@
   <section id="contact" class="py-16 px-4 bg-white text-center">
     <div class="max-w-4xl mx-auto">
 
-      <h2 class="heading text-3xl font-bold text-navy">
+      <h2 class="heading text-3xl md:text-4xl font-bold text-navy">
         Mari Terhubung
       </h2>
 
@@ -718,22 +718,13 @@
 
   <!-- FOOTER -->
   <footer class="bg-navy text-gray-300 text-center text-sm py-6">
-    © 2026 Ilham Wijaya | Sains Atmosfer dan Keplanetan
+    © 2026 Ilham Wijaya | Sains Atmosfir dan Keplanetan
   </footer>
 
   <!-- JAVASCRIPT -->
   <script>
 
-    /*
-      SERTIFIKAT HR DAN MICROSOFT EXCEL
-
-      Semua nama file berikut mengarah ke folder utama
-      repository GitHub, sejajar dengan index.html.
-
-      Kedua file baru Chahra Event yang perlu diunggah:
-      1. Chahra_Administrasi_HR_Batch17.pdf
-      2. Chahra_HR_Basic_Batch105.pdf
-    */
+    // Sertifikat pelatihan tambahan (file berada di root repository).
 
     const hrCertificates = [
       {
@@ -830,7 +821,7 @@
     // SERTIFIKAT FREEFLYER
     const freeflyerCertificates = [
       [
-        'FreeFlyer Level 1 • 4 Juni 2026',
+        'FreeFlyer Level 1 • April 2026',
         'Freeflyer-Level1-1.png'
       ],
       [
@@ -852,7 +843,7 @@
           <div class="pdf-preview">
             <span class="text-gray-400">
               <i class="fa-regular fa-file-pdf text-4xl"></i>
-              <span class="block text-xs mt-2">
+              <span class="block text-sm mt-2">
                 Memuat pratinjau PDF...
               </span>
             </span>
@@ -880,11 +871,11 @@
 
           </a>
 
-          <h3 class="font-bold text-navy mt-4">
+          <h3 class="text-lg font-bold text-navy mt-4">
             ${title}
           </h3>
 
-          <p class="text-xs text-gray-500 mt-1">
+          <p class="text-sm text-gray-600 mt-1">
             ${subtitle}
           </p>
 
@@ -968,7 +959,7 @@
         document.querySelectorAll('.pdf-preview span').forEach(el => {
           el.innerHTML =
             '<i class="fa-regular fa-file-pdf text-4xl"></i>' +
-            '<span class="block text-xs mt-2">Klik untuk membuka PDF</span>';
+            '<span class="block text-sm mt-2">Klik untuk membuka PDF</span>';
         });
         return;
       }
@@ -1028,7 +1019,7 @@
 
             placeholder.innerHTML =
               '<i class="fa-regular fa-file-pdf text-4xl"></i>' +
-              '<span class="block text-xs mt-2">Klik untuk membuka PDF</span>';
+              '<span class="block text-sm mt-2">Klik untuk membuka PDF</span>';
 
           }
 
